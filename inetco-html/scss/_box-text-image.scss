@@ -1,0 +1,86 @@
+.box-text-left, .box-text-right {
+	margin-bottom: 40px;
+	h3 {
+		font-family: 'HalisGR-BlackItalic';
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+	p {
+		font-family: 'HalisGR-Book';
+		font-size: 18px;
+		line-height: 1.4em;
+		margin-bottom: 30px;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		@include shadow;
+	}
+}
+
+.box-text-right {
+	display: table;
+	width: 100%;
+	.col-text {
+		width: 100%;
+		display: table-header-group;
+	}
+	.col-image {
+		display: table-row;
+		width: 100%;
+	}
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.box-text-left, .box-text-right {
+		img {
+			max-width: 600px;
+			@include center;
+			display: block;
+		}
+	}
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.box-text-left, .box-text-right {
+		margin-bottom: 120px;
+		display: table;
+		width: 100%;
+		img {
+			max-width: 100%;
+			margin: 0;
+			display: inline-block;
+		}
+		.col-text, .col-image {
+			display: table-cell;
+			width: 50%;
+			vertical-align: middle;
+		}
+	}
+	.box-text-left {
+		.col-text {
+			padding-right: 50px; 
+		}
+	}
+	.box-text-right {
+		.col-text {
+			padding-left: 50px;
+		}
+	}
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+	.box-text-left {
+		.col-text {
+			padding-right: 100px; 
+		}
+	}
+	.box-text-right {
+		.col-text {
+			padding-left: 100px;
+		}
+	}
+}

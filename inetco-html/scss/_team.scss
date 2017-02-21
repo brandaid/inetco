@@ -1,0 +1,118 @@
+.team {
+	padding: 20px 20px 0 20px;
+	text-align: center;
+	margin-bottom: 70px;
+	display: block;
+	position: relative;
+	@include border-box;
+	img {
+		width: 100%;
+		height: auto;
+		max-width: 285px;
+	}
+	h3 {
+		color: $brand-primary;
+		letter-spacing: 2px;
+		font-family: 'HalisGR-BoldItalic';
+		font-size: 20px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+	h4 {
+		font-family: 'HalisGR-Book';
+		font-size: 16px;
+		letter-spacing: 1px;
+		margin-bottom: 25px;
+		color: black;
+	}
+	p {
+		color: #999;
+		font-family: 'HalisGR-Book';
+		line-height: 1.8em;
+		margin-bottom: 28px;
+		font-size: 16px;
+	}
+	span {
+		display: inline-block;
+		color: #999;
+		border: 2px solid #999;
+		border-radius: 50%;
+		height: 40px;
+		width: 43px;
+		line-height: 43px;
+		text-align: center;
+		font-size: 36px;
+		padding-top: 3px;
+		font-family: 'HalisGR-Bold';
+		@include transition;
+	}
+	&:hover {
+		.overlay {
+			&:before {
+				background: rgba(58,94,132,0.5);
+			}
+		}
+		span {
+			background: $brand-primary;
+			border-color: $brand-primary;
+			color: white;
+		}
+	}
+}
+
+.overlay {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 47px;
+	line-height: 0;
+	&:before {
+		content: "";
+		background: rgba(241,137,3,0.5);
+		@include overlay;
+		@include transition;
+	}
+}
+.link-overlay {
+	@include overlay;
+	z-index: 999;
+}
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.box-team {
+		font-size: 0;
+		.team {
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+		}
+	}
+	.team {
+		img {
+			max-width: 320px;
+		}
+		h3 {
+			font-size: 18px;
+		}
+		h4 {
+			font-size: 18px;
+		}
+	}
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.box-team {
+		.team {
+			width: 33.33333%;
+		}
+	}
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+	.box-team {
+		.team {
+			width: 25%;
+		}
+	}
+}

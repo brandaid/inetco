@@ -1,0 +1,237 @@
+.o-wrapper {
+    -webkit-transition: -webkit-transform 0.3s;
+            transition: transform 0.3s;
+}
+
+
+/* -----------------------------------------------------------------------------
+
+  SLIDE AND PUSH MENUS COMPONENT
+  
+----------------------------------------------------------------------------- */
+/**
+ * Menu overview.
+ */
+.c-menu {
+    position: fixed;
+    z-index: -1;
+    background-color: $brand-secondary;
+    -webkit-box-shadow: 0 0 10px 4px rgba(0,0,0,0.1);
+        box-shadow: 0 0 10px 4px rgba(0,0,0,0.1);
+    -webkit-transition: -webkit-transform 0.3s;
+        transition: transform 0.3s;
+
+    padding: 100px 40px 0 40px;
+
+    @include border-box;
+}
+
+
+.c-menu--push-right {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+@media all and (min-width: 320px) {
+    .c-menu--push-right {
+        width: 300px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .c-menu--push-right {
+        width: 600px;
+    }
+}
+
+
+
+/**
+ * Slide/Push Menu Left.
+ */
+
+
+.c-menu--push-right {
+    top: 0;
+    right: 0;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+}
+@media all and (min-width: 320px) {
+    .c-menu--push-right {
+        -webkit-transform: translateX(300px);
+            -ms-transform: translateX(300px);
+                transform: translateX(300px);
+    }
+}
+
+@media all and (min-width: 768px) {
+    .c-menu--push-right {
+        -webkit-transform: translateX(600px);
+            -ms-transform: translateX(600px);
+                transform: translateX(600px);
+    }
+}
+
+.c-menu--push-right.is-active {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+
+    z-index: 9999;
+}
+
+.o-wrapper.has-push-right {
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+}
+@media all and (min-width: 320px) {
+    .o-wrapper.has-push-right {
+        -webkit-transform: translateX(-300px);
+            -ms-transform: translateX(-300px);
+                transform: translateX(-300px);
+    }
+}
+@media all and (min-width: 768px) {
+    .o-wrapper.has-push-right {
+        -webkit-transform: translateX(-600px);
+            -ms-transform: translateX(-600px);
+                transform: translateX(-600px);
+    }
+}
+
+
+/**
+ * Body states.
+ *
+ * When a menu is active, we want to hide the overflows on the body to prevent
+ * awkward document scrolling.
+ */
+body.has-active-menu {
+    overflow: hidden;
+}
+
+/**
+ * Close button resets.
+ */
+
+
+.c-menu__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    color: #fff;
+    font-size: 25px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.c-menu__close:focus {
+    outline: none;
+}
+
+/* -----------------------------------------------------------------------------
+
+  MASK COMPONENT
+  
+----------------------------------------------------------------------------- */
+.c-mask {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+          transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+}
+
+.c-mask.is-active {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    -webkit-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+}
+
+/* -----------------------------------------------------------------------------
+
+  BUTTONS
+  
+----------------------------------------------------------------------------- */
+.c-buttons {
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.c-button {
+    display: inline-block;
+    margin: 4px;
+    padding: 12px 24px;
+    color: #67b5d1;
+    background: none;
+    font-size: 14px;
+    border: solid 2px #67b5d1;
+    box-shadow: none;
+    border-radius: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.c-button:focus {
+    outline: none;
+}
+
+.c-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+
+.box-contact {
+    text-align: center;
+    h2 {
+        font-family: 'HalisGR-BlackItalic';
+        color: white;
+        text-transform: uppercase;
+        font-size: 30px;
+        span {
+            display: inline-block;
+            width: 100%;
+            color: $brand-primary;
+        }
+    }
+    h2, p {
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 18px;
+        font-family: 'HalisGR-Light';
+        color: #f5f5f5;
+        max-width: 480px;
+        line-height: 1.3em;
+        @include center;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .box-contact {
+            h2 {
+                font-size: 48px;
+        }
+    }
+}

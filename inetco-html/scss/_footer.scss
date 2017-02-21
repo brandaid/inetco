@@ -1,0 +1,117 @@
+.footer {
+	text-align: center;
+}
+.footer-top {
+	background: white;
+	padding-top: 55px;
+	padding-bottom: 55px;
+	h3 {
+		font-family: 'HalisGR-BoldItalic';
+		font-size: 14px;
+		color: #333;
+		text-transform: uppercase;
+		line-height: 1.4em;
+		margin-bottom: 10px;
+		a {
+			color: #333;
+			&:hover {
+				color: $brand-secondary;
+			}
+		}
+	}
+	p {
+		color: #666;
+		font-size: 15px;
+		line-height: 1.6em;
+		font-family: 'HalisGR-Book';
+		margin-bottom: 50px;
+	}
+	.phone {
+		color: $brand-primary;
+	}
+}
+.socials {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		a {
+			background: $brand-primary;
+			color: white;
+			display: block;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			border-radius: 50%;
+			&:hover {
+				background: $brand-secondary;
+			}
+		}
+	}
+}
+.footer-bottom {
+	background: #f5f5f5;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	small {
+		line-height: 1.7em;
+		font-size: 14px;
+		color: #666;
+		a:hover {
+			color: $brand-secondary;
+		}
+	}
+	span {
+		display: none;
+	}
+}
+.phone {
+	a:hover {
+		color: $brand-secondary;
+	}
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.footer-top {
+		.container {
+			display: table;
+			width: 100%;
+			@include border-box;
+			div {
+				display: table-cell;
+				width: 50%;
+				vertical-align: top;
+				text-align: right;
+				&.first {
+					text-align: left;
+				}
+			}
+		}
+	}
+	.footer-bottom {
+		text-align: right;
+		br {
+			display: none;
+		}
+		span {
+			display: inline-block;
+		}
+	}
+	.socials {
+		li {
+			margin-left: 20px;
+		}
+	}
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+}

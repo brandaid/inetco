@@ -1,0 +1,177 @@
+.header-top {
+	padding: 19px 10px;
+	background: white;
+	
+	position: relative;
+	z-index: 10;
+
+	display: table;
+	width: 100%;
+	@include shadow;
+	@include border-box;
+}
+.col-brand, .col-nav {
+	display: table-cell;
+	width: 30%;
+	vertical-align: middle;
+}
+.col-brand {
+	width: 70%;
+	img {
+		max-width: 189px;
+		height: auto;
+	}
+}
+
+.col-nav {
+	text-align: right;
+}
+
+.header-bottom {
+	background: $gray-light;
+	text-align: center;
+	@include shadow;
+	position: relative;
+	z-index: 9;
+	ul {
+		display: table;
+		width: 100%;
+		@include center;
+		li {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			width: 25%;
+			svg {
+				display: block;
+				width: auto;
+				height: 100%;
+				max-height: 30px;
+				@include center;
+				margin-bottom: 10px;
+				-webkit-transition: all 250ms ease-in-out;
+				-moz-transition: all 250ms ease-in-out;
+				-ms-transition: all 250ms ease-in-out;
+				-o-transition: all 250ms ease-in-out;
+				transition: all 250ms ease-in-out;
+			}
+			a {
+				font-size: 11px;
+				color: #222;
+				display: block;
+				padding: 20px 0;
+				img {
+					margin-bottom: 10px;
+				}
+				&:hover {
+					background: $brand-primary;
+					color: white;
+					svg {
+						fill: white;
+					}
+				}
+			}
+			i {
+				display: none;
+			}
+		}
+	}
+}
+
+// 565px
+@media all and (min-width: 565px) {
+	.header-bottom {
+		ul {
+			li {
+				i {
+					display: inline-block;
+				}
+				span {
+					display: none;
+				}
+				a {
+					&:hover {
+						background: $brand-primary;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.col-brand {
+		width: 26%;
+	}
+	.col-nav {
+		width: 74%;
+	}
+	.header-bottom {
+		ul {
+			padding: 0;
+			margin: 0; 
+			li {
+				i {
+					display: inline-block;
+				}
+				span {
+					display: none;
+				}
+				a {
+					&:hover {
+						background: $brand-primary;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.header-top {
+		padding: 0; 
+	}
+	.col-brand {
+		width: 22%;
+	}
+	.col-nav {
+		width: 78%;
+	}
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+	.col-brand {
+		width: 25%;
+	}
+	.col-nav {
+		width: 75%;
+
+	}
+	.col-brand {
+		img {
+			max-width: 220px;
+		}
+	}
+	.header-bottom {
+		ul {
+			max-width: 600px;
+			@include center;
+		}
+	}
+}
+
+
+// 1400px
+@media all and (min-width: 1400px) {
+	.col-brand {
+		width: 30%;
+	}
+	.col-nav {
+		width: 70%;
+	}
+}

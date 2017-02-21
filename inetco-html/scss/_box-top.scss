@@ -1,0 +1,179 @@
+.box-top {
+	background: $gray-light;
+	text-align: center;
+	position: relative;
+	margin-bottom: 150px;
+	padding-bottom: 60px;
+	&:before {
+		content: "";
+		height: 60px;
+		width: 1px;
+		background: $brand-primary;
+		display: block;
+		position: relative;
+		left: 50%;
+	}
+	h1 {
+		font-family: 'HalisGR-BlackItalic';
+		font-size: 36px;
+		margin: 40px 0 20px 0;
+		text-transform: uppercase;
+	}
+	p {
+		padding-left: 15px;
+		padding-right: 15px;
+		font-size: 18px;
+		font-family: 'HalisGR-Book';
+		line-height: 1.6em;
+		max-width: 840px;
+		@include center;
+	}
+}
+.content-img {
+	position: absolute;
+	width: 100%;
+	height: 10px;
+	z-index: 9;
+}
+.big-title {
+	text-align: center;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 9;
+	h2 {
+		color: #eaeaea;
+		font-family: 'HalisGR-Black';
+		text-transform: uppercase;
+		white-space: nowrap;
+		font-size: 60px;
+	}
+}
+.with-image {
+	height: 100px;
+}
+img.box-top-image {
+	max-width: 240px;
+	height: auto;
+
+	position: relative;
+	top: 20px;
+}
+.cas-studies {
+	img.box-top-image {
+		@include big-shadow;
+		max-width: 320px;
+		top: 40px;
+	}
+}
+.top-title-without-img {
+	background: $gray-light;
+	text-align: center;
+	position: relative;
+	margin-bottom: 60px;
+	padding-bottom: 60px;
+	&:before {
+		content: "";
+		height: 60px;
+		width: 1px;
+		background: $brand-primary;
+		display: block;
+		position: relative;
+		left: 50%;
+	}
+	h1 {
+		font-family: 'HalisGR-BlackItalic';
+		font-size: 26px;
+		margin: 40px 0 20px 0;
+		text-transform: uppercase;
+		max-width: 760px;
+		line-height: 1.2em;
+	}
+	p {
+		padding-left: 15px;
+		padding-right: 15px;
+		font-size: 18px;
+		font-family: 'HalisGR-Book';
+		line-height: 1.6em;
+		max-width: 840px;
+	}
+	h1, p, a {
+		position: relative;
+		z-index: 99;
+		@include center;
+	}
+	a {
+		margin-top: 40px;
+		margin-bottom: 80px;
+	}
+}
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.box-top {
+		margin-bottom: 200px;
+	}
+	img.box-top-image {
+		max-width: 320px;
+	}
+	.big-title {
+		h2 {
+			font-size: 110px;
+			position: relative;
+			bottom: -10px;
+			line-height: 70%;
+		}
+	}
+
+	.cas-studies {
+		img.box-top-image {
+			max-width: 520px;
+		}
+	}
+	.top-title-without-img {
+		h1 {
+			font-size: 36px;
+		}
+	}
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	img.box-top-image {
+		max-width: 320px;
+	}
+	.big-title {
+		h2 {
+			font-size: 140px;
+		}
+	}
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+	.box-top {
+		margin-bottom: 350px;
+	}
+	img.box-top-image {
+		max-width: 420px;
+		top: 40px;
+	}
+	.big-title {
+		h2 {
+			font-size: 180px;
+			bottom: -17px;
+		}
+	}
+	.cas-studies {
+		img.box-top-image {
+			max-width: 820px;
+		}
+	}
+
+	.top-title-without-img {
+		a {
+			margin-bottom: 110px;
+		}
+	}
+}

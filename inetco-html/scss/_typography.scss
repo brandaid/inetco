@@ -1,0 +1,38 @@
+h1, h2, h3, h4, h5, h6, p, span, a, ul, li {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.title-orange {
+	font-size: 18px;
+	color: $brand-primary;
+	font-family: 'HalisGR-BoldItalic';
+	text-transform: uppercase;
+	text-align: center;
+	margin: 85px 0 0 0 ;
+	&:after {
+		content: "";
+		height: 60px;
+		width: 1px;
+		background: $brand-primary;
+		display: block;
+		left: 50%;
+		position: relative;
+		margin-top: 50px;
+	}
+}
+
+b, strong {
+	font-family: 'HalisGR-Bold';
+}
+// 768px
+@media all and (min-width: $screen-portrait) {
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+}
