@@ -1,0 +1,418 @@
+.orange-table {
+	margin-bottom: 0;
+	.col-text {
+		background: $brand-primary;
+		text-align: center;
+		padding: 80px 15px;
+		h3, p {
+			color: white;
+		}
+		h3 {
+			text-transform: uppercase;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.col-image {
+		background: url(images/bkg-case.jpg) no-repeat center center; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		position: relative;
+		padding: 80px 15px;
+		text-align: center;
+		&:after {
+			content: "";
+			background: rgba($brand-secondary, .8);
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+		}
+		* {
+			position: relative;
+			z-index: 999;
+		}
+		h3 {
+			font-family: 'HalisGR-Light';
+			font-size: 32px;
+			color: white;
+			letter-spacing: 1px;
+			line-height: 1.6em;
+		}
+	}
+}
+
+.box-white-two-columns {
+	padding: 0px 15px;
+	text-align: center;
+	&:before {
+		content: "";
+		height: 60px;
+		width: 1px;
+		background: $brand-primary;
+		display: block;
+		position: relative;
+		left: 50%;
+	}
+	&:after {
+		content: "";
+		height: 60px;
+		width: 1px;
+		background: $brand-primary;
+		display: block;
+		position: relative;
+		left: 50%;
+	}
+	.ico {
+		max-width: 45px;
+		@include center;
+		display: block;
+		margin-bottom: 65px;
+		margin-top: 35px;
+	}
+	h2 {
+		font-family: 'HalisGR-BlackItalic';
+		font-size: 40px;
+		margin-bottom: 60px;
+		text-transform: uppercase;
+	}
+	p {
+		font-size: 18px;
+		font-family: 'HalisGR-Book';
+		line-height: 1.8em;
+		max-width: 940px;
+		@include center;
+		margin-bottom: 50px;
+	}
+}
+
+.box-gray {
+	background: $gray-light;
+	text-align: center;
+	&:before {
+		content: "";
+		height: 60px;
+		width: 1px;
+		background: $brand-primary;
+		display: block;
+		position: relative;
+		left: 50%;
+	}
+	&:after {
+		content: "";
+		height: 60px;
+		width: 1px;
+		background: $brand-primary;
+		display: block;
+		position: relative;
+		left: 50%;
+	}
+	.ico {
+		max-width: 60px;
+		@include center;
+		display: block;
+		margin-bottom: 50px;
+		margin-top: 35px;
+	}
+	h2 {
+		font-family: 'HalisGR-BlackItalic';
+		font-size: 40px;
+		margin-bottom: 60px;
+		text-transform: uppercase;
+	}
+	p {
+		font-size: 18px;
+		font-family: 'HalisGR-Book';
+		line-height: 1.8em;
+		max-width: 940px;
+		@include center;
+		margin-bottom: 50px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.box-blue {
+	background: url(images/bkg-studies.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+	padding: 110px 20px;
+	text-align: center;
+	&:before {
+		content: "";
+		height: 60px;
+		width: 1px;
+		background: #dce2e8;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		z-index: 999;
+	}
+	&:after {
+		content: "";
+		background: rgba($brand-secondary, .85);
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+	}
+	* {
+		position: relative;
+		z-index: 999;
+	}
+	span {
+		height: 60px;
+		width: 1px;
+		background: #dce2e8;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		z-index: 999;
+		display: inline-block;
+	}
+	p, small {
+		color: white;
+	}
+	p {
+		font-size: 18px;
+		font-family: 'HalisGR-LightItalic';
+		max-width: 90%;
+		@include center;
+		line-height: 1.5em;
+		margin-bottom: 66px;
+	}
+	h4 {
+		font-family: 'HalisGR-Book';
+		font-size: 18px;
+		margin-bottom: 20px;
+		color: $brand-primary;
+	}
+	small {
+		font-family: 'HalisGR-BookItalic';
+		font-size: 15px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	
+}
+
+//PAGE CASE STUDIES
+
+.table-cases {
+	.box-case {
+		background: url(images/case-study.jpg) no-repeat center center; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		position: relative;
+		text-align: center;
+		.box {
+			display: table;
+			width: 100%;
+			height: 400px;
+			position: relative;
+			z-index: 99;
+			.center-info {
+				display: table-cell;
+				height: 100%;
+				vertical-align: middle;
+			}
+		}
+		&:after {
+			content: "";
+			background: rgba(241,137,3,0.5);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			@include transition;
+		}
+		&:hover {
+			&:after {
+				background: rgba(58,94,132,0.5);
+			}
+		}
+	}
+}
+
+.center-info {
+	padding-left: 20px;
+	padding-right: 20px;
+	h3, p {
+		color: white;
+	}
+	h3 {
+		font-family: 'HalisGR-BoldItalic';
+		text-transform: uppercase;
+		font-size: 36px;
+		margin-bottom: 13px;
+	}
+	p {
+		font-size: 14px;
+		font-family: 'HalisGR-Book';
+		margin-bottom: 50px;
+		line-height: 1.4em;
+	}
+	a.btn {
+		font-size: 16px;
+		background: $brand-primary;
+		color: white;
+		&:hover {
+			background: transparent;
+		}
+	}
+}
+
+
+// 565px
+@media all and (min-width: 565px) {
+	.table-cases {
+		.box-case {
+			.box {
+				height: 500px;
+			}
+		}
+	}
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.orange-table {
+		.col-text, .col-image {
+			padding: 140px 100px;
+		}
+	}
+	.box-blue {
+		p {
+			max-width: 840px;
+			font-size: 21px;
+		}
+	}
+	.table-cases {
+		font-size: 0;
+		.box-case {
+			display: inline-block;
+			width: 50%;
+			.box {
+				height: 400px;
+			}
+		}
+	}
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.orange-table {
+		.col-text {
+			background: $brand-primary;
+			text-align: center;
+			padding: 50px 15px;
+			h3, p {
+				color: white;
+			}
+			h3 {
+				text-transform: uppercase;
+			}
+			p {
+				margin-bottom: 0;
+			}
+		}
+		.col-image {
+			h3 {
+				font-size: 32px;
+			}
+		}
+	}
+
+	.box-white-two-columns {
+		.container {
+			display: table;
+			width: 100%;
+			div {
+				display: table-cell;
+				width: 50%;
+				vertical-align: top;
+				p {
+					text-align: left;
+				}
+				&:nth-child(1) {
+					padding-right: 40px;
+				}
+				&:nth-child(2) {
+					padding-left: 40px;
+				}
+			}
+		}
+	}
+
+	.table-cases {
+		.box-case {
+			width: 25%;
+			.box {
+				height: 300px;
+				h3 {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+// 1200px
+@media all and (min-width: 1300px) {
+	.box-white-two-columns {
+		p {
+			margin-bottom: 112px;
+		}
+		.container {
+			width: 1280px;
+			@include border-box;
+			p {
+				margin-bottom: 54px;
+			}
+		}
+	}
+	.table-cases {
+		.box-case {
+			.box {
+				h3 {
+					font-size: 32px;
+				}
+			}
+		}
+	}
+}
+// 1400px
+@media all and (min-width: 1400px) {
+	.orange-table {
+		.col-text {
+			padding: 150px;
+		}
+		.col-image {
+			h3 {
+				font-size: 42px;
+			}
+		}
+	}
+
+	.table-cases {
+		.box-case {
+			.box {
+				height: 450px;
+				h3 {
+					font-size: 36px;
+				}
+			}
+		}
+	}
+}

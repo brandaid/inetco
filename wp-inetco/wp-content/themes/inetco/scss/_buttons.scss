@@ -1,0 +1,182 @@
+.btn-contact {
+	background: $brand-primary;
+	color: white;
+	display: block;
+	padding: 30px 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	&:after, &:before {
+		display: inline-block;
+	    font: normal normal normal 25px/1 FontAwesome;
+	    font-size: 25px;
+	    text-rendering: auto;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+	&:before {
+		content: "\f0e0";
+		display: none;
+	}
+	&:after {
+		content: "\f105";
+		vertical-align: middle;
+		margin-left: 10px;
+	}
+	span {
+		font-family: 'HalisGR-BoldItalic';
+	}
+	i {
+		opacity: .5;
+		font-family: 'HalisGR-Regular';
+	}
+	&:hover {
+		background: darken($brand-primary,5%);
+		span, &:after, &:before, i {
+			color: white;
+		}
+	}
+}
+.btn {
+	border: 1px solid $brand-primary;
+	padding: 20px;
+	font-family: 'HalisGR-SBoldItalic';
+	text-transform: uppercase;
+	display: inline-block;
+	color: $brand-primary;
+	&:hover {
+		background: $brand-primary;
+		color: white;
+	}
+}
+.btn-orange {
+	@extend .btn;
+	background: $brand-primary;
+	color: white;
+	&:hover {
+		background: $brand-secondary;
+		border-color: $brand-secondary;
+	}
+}
+.btn-author {
+	padding: 12px 17px 9px 17px;
+	font-size: 14px;
+	border: 0;
+	background: $brand-primary;
+	font-family: 'HalisGR-Medium';
+	color: white;
+	&:hover {
+		background: darken($brand-primary, 4%);
+		
+	}
+}
+.btn-read-more {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: $brand-primary;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+	color: black;
+	font-family: 'HalisGR-Medium';
+	&:before {
+		content: "\f105";
+		display: inline-block;
+		height: 25px;
+		width: 28px;
+		padding-top: 5px;
+		padding-left: 2px;
+		text-align: center;
+		line-height: 30px;
+		border: 2px solid #ccc;
+		color: #ccc;
+	    font: normal normal normal 17px/1 FontAwesome;
+	    text-rendering: auto;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    margin-right: 10px;
+	    @include transition;
+	    vertical-align: middle;
+	    border-radius: 50%;
+	    font-weight: bold;
+
+	    position: relative;
+	    top: -1px;
+	}
+	&:hover {
+		&:before {
+			background: $brand-primary;
+			color: white;
+			border-color: $brand-primary;
+		}
+	}
+}
+.btn-back {
+	border: 1px solid white;
+	display: inline-block;
+	text-transform: uppercase;
+	background: $brand-primary;
+	color: white!important;
+	padding: 20px 30px;
+	font-family: 'HalisGR-BoldItalic';
+	text-decoration: none!important;
+	text-align: center;
+	&:hover {
+		background: $brand-secondary;
+		color: white!important;
+	}
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.btn-contact {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 20px 10px;
+		float: right;
+		&:after, span {
+			display: none;
+		}
+		&:before {
+			content: "\f0e0";
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	.btn-contact {
+		padding: 25px;
+		span {
+			display: block;
+			i {
+				display: none;
+			}
+		}
+		&:before {
+			display: none;
+		}
+	}
+
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+	.btn-contact {
+		padding: 37px 0px;
+		min-width: 230px;
+		text-align: center;
+		span {
+			display: block;
+			i {
+				display: none;
+			}
+		}
+		&:before {
+			display: none;
+		}
+	}
+}
